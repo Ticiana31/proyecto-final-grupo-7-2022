@@ -3,6 +3,17 @@ from django.contrib.auth.models import AbstractUser
 
 
 class Usuario(AbstractUser):
+     nombre = models.CharField(max_length=100)
+    apellido = models.CharField(max_length=100)
+    dni= models.CharField(max_length=20)
+    sexos = [
+        (´F´, ´Femenino´)
+        (´M´, ´Masculino´)
+        (´S/D´, ´Sin definir´)
+    ] 
+    sexo = models.CharField (max_length= 1, choices=sexos, default= ´F´)
+    user_name = models.CharField(max_length=200)
+    password = models.CharField(max_length=20)
     email = models.CharField(max_length=320)
     telefono = models.IntegerField(blank=True, null=True)
     localidad = models.CharField(max_length=60)
