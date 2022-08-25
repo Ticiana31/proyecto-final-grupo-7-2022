@@ -9,7 +9,7 @@ class Usuario(AbstractUser):
     sexos = [
         (´F´, ´Femenino´)
         (´M´, ´Masculino´)
-        (´S/D´,´´sin definir´)
+        (´S/D´,´sin definir´)
     ] 
     sexo = models.CharField (max_length= 1, choices=sexos, default= ´F´)
     usuario=models.CharField(max_length=20)
