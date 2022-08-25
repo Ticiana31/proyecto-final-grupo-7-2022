@@ -3,11 +3,29 @@ from django.contrib.auth.models import AbstractUser
 
 
 class Usuario(AbstractUser):
+    nombre = models.CharField(max_length=100)
+    apellido = models.CharField(max_length=100)
+     dni= models.CharField(max_length=20)
+    sexos = [
+        (´F´, ´Femenino´)
+        (´M´, ´Masculino´)
+        (´S/D´,´´sin definir´)
+    ] 
+    sexo = models.CharField (max_length= 1, choices=sexos, default= ´F´)
+    usuario=models.CharField(max_length=20)
+    contraseña= models.CharField(max_length=20)
     email = models.CharField(max_length=320)
     telefono = models.IntegerField(blank=True, null=True)
     localidad = models.CharField(max_length=60)
     provincia = models.CharField(max_length=60)
     fecha_nacimiento = models.DateField(blank=True, null=True)
+    usuario1= input()
+    contraseña1= input()
+    if usuario==usuario1 and contraseña==contraseña1
+        print("Te damos la bienvenida a la Fundación Pueblo")
+    else: 
+        print("usuario o contraseña inválido")
+    
 
 class Modalidad(models.Model):
     nombre = models.CharField(max_length=50)
