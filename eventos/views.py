@@ -28,3 +28,8 @@ def Login(request):
 def Register(request):
     template_name= "register.html"
     return render(request, template_name, {})
+
+
+def contacto.Exitoso(request)
+template_name="contacto.Exitoso.html"
+return render (request,template_name)
