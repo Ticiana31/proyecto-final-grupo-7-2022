@@ -49,8 +49,8 @@ ROOT_URLCONF = 'proyecto_ONG.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["templates"],
+        'BACKEND': 'django.template.backends.django.DjangoTemplates,
+        'DIRS': [´C:proyecto-final-grupo-7-2022/eventos/Plantilla´],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -109,7 +109,12 @@ STATIC_DIRS = os.path.join(BASE_DIR, "static")
 STATICFILES_DIRS = [
     STATIC_DIRS
 ]
-
+EMAIL_BACKED= "django.core.mail.backeds.smtp.EmailBackend"
+EMAIL_HOST= "stmp.gmail.com"
+EMAIL_USE_TLS= True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "ticiana.31052001@gmail.com"
+EMAIL_HOST_PASSWORD = 18/11/2001
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
