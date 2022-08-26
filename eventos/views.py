@@ -24,7 +24,13 @@ def Contactos(request):
 def Login(request):
     template_name= "login.html"
     return render(request, template_name, {})
-
+usuario1= input()
+    contraseña1= input()
+    if usuario==usuario1 and contraseña==contraseña1
+        print("Te damos la bienvenida a la Fundación Pueblo")
+    else: 
+        print("usuario o contraseña inválido")
+    
 def Register(request):
     template_name= "register.html"
     return render(request, template_name, {})
