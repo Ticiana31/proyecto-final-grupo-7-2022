@@ -19,12 +19,7 @@ class Usuario(AbstractUser):
     localidad = models.CharField(max_length=60)
     provincia = models.CharField(max_length=60)
     fecha_nacimiento = models.DateField(blank=True, null=True)
-    usuario1= input()
-    contraseña1= input()
-    if usuario==usuario1 and contraseña==contraseña1
-        print("Te damos la bienvenida a la Fundación Pueblo")
-    else: 
-        print("usuario o contraseña inválido")
+  
     
 
 class Modalidad(models.Model):
